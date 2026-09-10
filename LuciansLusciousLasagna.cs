@@ -1,25 +1,22 @@
 public class Lasagna
 {
-    private const int MinutesPerLayer = 2;
-    private const int ExpectedMinutes = 40;
-
     public int ExpectedMinutesInOven()
     {
-        return ExpectedMinutes;
+        return 40;
     }
 
-    public int RemainingMinutesInOven(int actualMinutesInOven)
+
+    public int RemainingMinutesInOven(int actualMinutes)
     {
-        return ExpectedMinutesInOven() - actualMinutesInOven;
+        return ExpectedMinutesInOven() - actualMinutes;
     }
 
     public int PreparationTimeInMinutes(int numberOfLayers)
     {
-        return numberOfLayers * MinutesPerLayer;
+        return numberOfLayers * 2;
     }
-
-    public int ElapsedTimeInMinutes(int numberOfLayers, int minutesInOven)
+    public int ElapsedTimeInMinutes(int numberOfLayers, int actualMinutesInOven)
     {
-        return PreparationTimeInMinutes(numberOfLayers) + minutesInOven;
+        return PreparationTimeInMinutes(numberOfLayers) + actualMinutesInOven;
     }
 }
