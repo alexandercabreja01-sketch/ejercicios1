@@ -44,7 +44,7 @@ class Program
         Console.WriteLine("     PRUEBA DE PRODUCCIÓN - FABRICA DE AUTOS   ");
         Console.WriteLine("==============================================\n");
 
-        // Probemos con diferentes velocidades (ej: 0, 3, 6, 9, 10)
+        // aqui se prueba con diferentes velocidades
         int[] velocidades = { 0, 3, 6, 9, 10 };
 
         foreach (int speed in velocidades)
