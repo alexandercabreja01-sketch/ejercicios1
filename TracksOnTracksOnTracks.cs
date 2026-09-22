@@ -86,8 +86,9 @@ class Program
 
         bool tieneElm = Languages.HasLanguage(misLenguajes, "Elm");
         Console.WriteLine($"5. ¿Contiene 'Elm'?: {tieneElm}");
-
-        Console.WriteLine($"6. Lista invertida: {string.Join(", ", misLenguajes)}");
+       
+        List<string> Reves = Languages.ReverseList(misLenguajes);
+        Console.WriteLine($"6. Lista invertida: {string.Join(", ", Reves)}");
 
         List<string> listaEjemplo = Languages.GetExistingLanguages(); // {"C#", "Clojure", "Elm"}
         bool esEmocionante = Languages.IsExciting(listaEjemplo);
