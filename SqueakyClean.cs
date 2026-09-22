@@ -11,17 +11,15 @@ public static class Identifier
         {
             char ch = identifier[i];
 
-            // Tarea 1: Reemplazar espacios por guiones bajos
             if (ch == ' ')
             {
                 sb.Append('_');
             }
-            // Tarea 2: Reemplazar caracteres de control por "CTRL"
             else if (char.IsControl(ch))
             {
                 sb.Append("CTRL");
             }
-            // Tarea 3: Convertir kebab-case a camelCase (reemplazar guión y volver mayúscula el siguiente carácter)
+
             else if (ch == '-')
             {
                 if (i + 1 < identifier.Length && char.IsLetter(identifier[i + 1]))
@@ -48,8 +46,7 @@ public static class Identifier
     static void Main(string[] args)
     {
         Console.WriteLine("     LIMPIADOR DE IDENTIFICADORES (C#)        ");
-
-        // Casos de prueba requeridos por el ejercicio:
+    
         string[] pruebas = {
             "my   Id",          
             "my\0Id",           
